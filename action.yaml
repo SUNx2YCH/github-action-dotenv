@@ -1,0 +1,11 @@
+name: 'dotenv'
+description: ''
+inputs:
+  dotenv_file:
+    description: '.env filename (relative to repo root)'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://sunx2ych/github-action-dotenv:1.0.0'
+  args:
+    - ${{ inputs.dotenv_file }}
